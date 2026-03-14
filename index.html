@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HygieneOps Copilot</title>
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+scroll-behavior:smooth;
+}
+
+/* COLORS */
+
+:root{
+--primary:#4F46E5;
+--secondary:#7C3AED;
+--accent:#EC4899;
+--text:#0F172A;
+--bg:#F8FAFC;
+}
+
+/* HERO */
+
+.hero{
+padding:160px 8%;
+background:var(--bg);
+}
+
+.hero-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.hero h1{
+font-size:44px;
+color:var(--text);
+margin-bottom:20px;
+}
+
+.hero p{
+color:#555;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+}
+
+.btn{
+padding:12px 24px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn-primary{
+background:var(--primary);
+color:white;
+}
+
+.btn-secondary{
+border:1px solid var(--primary);
+color:var(--primary);
+}
+
+.hero img{
+width:100%;
+}
+
+/* PLATFORM */
+
+.platform{
+padding:120px 8%;
+background:white;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.section-sub{
+text-align:center;
+color:#666;
+margin-bottom:50px;
+}
+
+.platform-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.platform-card{
+background:#f9fafb;
+padding:25px;
+border-radius:10px;
+text-align:center;
+transition:.3s;
+}
+
+.platform-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.platform-img{
+width:100%;
+height:160px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+/* PROCESS */
+
+.process{
+padding:120px 8%;
+background:#f9fafb;
+}
+
+.process-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+text-align:center;
+}
+
+.process img{
+width:100%;
+height:150px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+/* PRICING */
+
+.pricing{
+padding:120px 8%;
+background:white;
+}
+
+.pricing-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.price-card{
+border:1px solid #eee;
+padding:35px;
+border-radius:10px;
+text-align:center;
+}
+
+.price-card h3{
+margin-bottom:10px;
+}
+
+.price-card ul{
+list-style:none;
+margin:20px 0;
+}
+
+.price-card li{
+margin:8px 0;
+color:#555;
+}
+
+/* FAQ */
+
+.faq{
+padding:120px 8%;
+background:black;
+color:white;
+}
+
+.faq-container{
+max-width:800px;
+margin:auto;
+}
+
+.faq-item{
+border-bottom:1px solid #333;
+padding:18px 0;
+}
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+color:#ccc;
+margin-top:8px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:120px 8%;
+background:white;
+}
+
+.contact-container{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#111;
+color:#aaa;
+padding:20px;
+text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+padding:20px;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero-container,
+.platform-grid,
+.process-grid,
+.pricing-grid,
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">HygieneOps Copilot</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+<a href="#platform">Platform</a>
+<a href="#process">How It Works</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</div>
+
+</header>
+<header class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">HygieneOps Copilot</div>
+
+<nav id="navMenu">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#process">Process</a>
+<a href="#platform">Platform</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+</header>
+
+
+
+<style>
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+padding:11px 8%;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+font-family:'Segoe UI',sans-serif;
+box-shadow:0 3px 15px rgba(0,0,0,0.15);
+}
+
+/* CONTAINER */
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:white;
+}
+
+/* NAV LINKS */
+
+#navMenu{
+display:flex;
+gap:35px;
+align-items:center;
+}
+
+/* LINKS */
+
+#navMenu a{
+text-decoration:none;
+color:white;
+font-size:15px;
+font-weight:500;
+position:relative;
+}
+
+/* HOVER UNDERLINE */
+
+#navMenu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:white;
+transition:0.3s;
+}
+
+#navMenu a:hover::after{
+width:100%;
+}
+
+/* HAMBURGER */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+
+.menu-toggle span{
+width:25px;
+height:3px;
+background:white;
+display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+#navMenu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+flex-direction:column;
+padding:25px 0;
+gap:20px;
+display:none;
+}
+
+#navMenu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:flex;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("navMenu");
+
+/* OPEN CLOSE MENU */
+
+toggle.addEventListener("click",()=>{
+menu.classList.toggle("active");
+});
+
+/* CLOSE MENU WHEN LINK CLICKED */
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+menu.classList.remove("active");
+
+});
+
+});
+
+/* SMOOTH SCROLL */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+});
+
+</script>
+<section class="hero-section" id="home">
+
+<div class="hero-container">
+
+<!-- LEFT TEXT -->
+
+<div class="hero-left">
+
+<h1>AI-Powered Hygiene Execution Platform for Food Manufacturing</h1>
+
+<div class="hero-divider"></div>
+
+<p class="hero-text">
+HygieneOps Copilot transforms sanitation procedures into
+machine-enforceable digital workflows. It guides operators,
+verifies cleaning results, and replaces paper logs with
+real-time audit-ready hygiene compliance.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#platform" class="btn-primary">Explore Platform</a>
+
+<a href="#contact" class="btn-secondary">Request Demo</a>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT IMAGE -->
+
+<div class="hero-right">
+
+<img src="hero-hygiene.jpg" alt="HygieneOps Copilot Dashboard">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* HERO SECTION */
+
+.hero-section{
+padding:120px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* CONTAINER */
+
+.hero-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+/* LEFT SIDE */
+
+.hero-left h1{
+font-size:46px;
+color:black;
+margin-bottom:10px;
+line-height:1.2;
+}
+
+/* DIVIDER */
+
+.hero-divider{
+width:80px;
+height:4px;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+margin:15px 0 20px;
+border-radius:3px;
+}
+
+/* TEXT */
+
+.hero-text{
+color:#555;
+font-size:17px;
+line-height:1.7;
+margin-bottom:30px;
+max-width:540px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:15px;
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary{
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+color:white;
+padding:13px 26px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* SECONDARY BUTTON */
+
+.btn-secondary{
+border:2px solid #0000FF;
+color:#0000FF;
+padding:13px 26px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-secondary:hover{
+background:#0000FF;
+color:white;
+}
+
+/* RIGHT IMAGE */
+
+.hero-right img{
+width:100%;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-section{
+padding:80px 6%;
+}
+
+.hero-container{
+grid-template-columns:1fr;
+gap:35px;
+text-align:center;
+}
+
+.hero-left h1{
+font-size:32px;
+}
+
+.hero-divider{
+margin:15px auto 20px;
+}
+
+.hero-text{
+margin:auto;
+font-size:16px;
+}
+
+.hero-buttons{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero-right{
+margin-top:20px;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+/* Smooth Scroll */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+anchor.addEventListener("click", function(e) {
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+});
+
+</script>
+<section class="about-section" id="about">
+
+<div class="about-container">
+
+<!-- LEFT CONTENT -->
+
+<div class="about-left">
+
+<h2>About HygieneOps Copilot</h2>
+
+<div class="about-divider"></div>
+
+<p>
+HygieneOps Copilot is an advanced hygiene execution platform
+built for food manufacturers. The system transforms traditional
+sanitation procedures into machine-enforceable digital workflows
+that guide operators step-by-step and verify cleaning outcomes
+through real-time evidence and testing.
+</p>
+
+<p>
+By replacing paper-based SSOP records with intelligent operational
+control, the platform ensures consistent sanitation execution,
+reduces contamination risks, and generates audit-ready compliance
+evidence aligned with BRCGS and HACCP standards.
+</p>
+
+<div class="about-features">
+
+<div class="feature">Executable SSOP Workflows</div>
+<div class="feature">Real-Time Hygiene Verification</div>
+<div class="feature">Closed-Loop Corrective Actions</div>
+<div class="feature">Audit-Ready Evidence Reports</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="about-right">
+
+<div class="founder-box">
+
+<h3 class="founder-title">Founder</h3>
+
+<div class="founder-divider"></div>
+
+<p>
+<strong>Sahul Sajeevan</strong> founded HygieneOps Copilot with the
+vision of transforming how food manufacturers manage
+sanitation and compliance. The company focuses on
+building advanced operational technology that converts
+traditional hygiene procedures into intelligent,
+machine-enforceable workflows.
+</p>
+
+<p>
+HygieneOps Copilot is designed to help manufacturing
+teams achieve consistent sanitation execution,
+real-time verification, and audit-ready compliance.
+By combining automation, operational intelligence,
+and AI-driven guidance, the platform enables food
+manufacturers to strengthen food safety, reduce
+operational risks, and maintain regulatory confidence.
+</p>
+
+<a href="#" class="linkedin-btn">LinkedIn</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.about-section{
+padding:140px 8%;
+background:linear-gradient(135deg,#00F0FF,#0000FF);
+font-family:'Segoe UI',sans-serif;
+}
+
+/* CONTAINER */
+
+.about-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+/* LEFT */
+
+.about-left h2{
+font-size:42px;
+margin-bottom:10px;
+color:white;
+}
+
+/* DIVIDER */
+
+.about-divider{
+width:80px;
+height:4px;
+background:white;
+margin-bottom:25px;
+border-radius:3px;
+}
+
+.about-left p{
+color:#ffffff;
+line-height:1.8;
+margin-bottom:20px;
+font-size:16px;
+max-width:520px;
+}
+
+/* FEATURES */
+
+.about-features{
+margin-top:25px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.feature{
+background:white;
+color:#0000FF;
+padding:10px 14px;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+}
+
+/* FOUNDER BOX */
+
+.founder-box{
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0 12px 35px rgba(0,0,0,0.2);
+}
+
+.founder-title{
+margin-bottom:5px;
+color:black;
+}
+
+/* FOUNDER DIVIDER */
+
+.founder-divider{
+width:60px;
+height:3px;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+margin-bottom:15px;
+border-radius:2px;
+}
+
+.founder-box p{
+color:#555;
+line-height:1.7;
+margin-bottom:18px;
+}
+
+/* LINKEDIN BUTTON */
+
+.linkedin-btn{
+display:inline-block;
+padding:10px 18px;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+}
+
+.linkedin-btn:hover{
+opacity:0.9;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.about-section{
+padding:90px 6%;
+}
+
+.about-container{
+grid-template-columns:1fr;
+gap:40px;
+text-align:center;
+}
+
+.about-left h2{
+font-size:32px;
+}
+
+.about-left p{
+margin:auto;
+font-size:15px;
+max-width:100%;
+}
+
+.about-features{
+grid-template-columns:1fr;
+max-width:320px;
+margin:auto;
+}
+
+.founder-box{
+padding:25px;
+}
+
+.founder-divider{
+margin:12px auto 18px auto;
+}
+
+}
+
+</style>
+<section class="process-section" id="process">
+
+<div class="process-container">
+
+<h2 class="process-title">How HygieneOps Copilot Works</h2>
+
+<div class="process-divider"></div>
+
+<p class="process-sub">
+HygieneOps Copilot transforms sanitation from paper documentation
+into a real-time operational control system.
+</p>
+
+
+<div class="process-grid">
+
+<!-- STEP 1 -->
+
+<div class="process-card">
+
+<img src="process1.jpg" class="process-img">
+
+<div class="step">01</div>
+
+<h3>SSOP Digitization</h3>
+
+<p>
+Existing sanitation procedures are converted from static
+documents into machine-enforceable digital workflows.
+Each cleaning task includes required steps, timers,
+chemical checks, and mandatory proof capture to
+ensure correct execution.
+</p>
+
+</div>
+
+
+<!-- STEP 2 -->
+
+<div class="process-card">
+
+<img src="process2.jpg" class="process-img">
+
+<div class="step">02</div>
+
+<h3>Guided Hygiene Execution</h3>
+
+<p>
+Operators receive step-by-step cleaning instructions
+directly on mobile devices in their native language.
+The system guides staff through correct procedures,
+reducing interpretation errors and ensuring consistent
+sanitation across shifts.
+</p>
+
+</div>
+
+
+<!-- STEP 3 -->
+
+<div class="process-card">
+
+<img src="process3.jpg" class="process-img">
+
+<div class="step">03</div>
+
+<h3>Verification & Corrective Control</h3>
+
+<p>
+Verification tests such as ATP, allergen, and
+microbiological checks validate cleaning results.
+If a verification fails, the platform automatically
+triggers targeted re-clean workflows until
+a verified hygiene pass is achieved.
+</p>
+
+</div>
+
+
+<!-- STEP 4 -->
+
+<div class="process-card">
+
+<img src="process4.jpg" class="process-img">
+
+<div class="step">04</div>
+
+<h3>Audit-Ready Compliance</h3>
+
+<p>
+All sanitation actions, verification results,
+and corrective actions are recorded in a
+structured evidence chain. The system generates
+instant audit evidence packs aligned with
+BRCGS, HACCP, and food safety inspections.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.process-section{
+padding:120px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+/* CONTAINER */
+
+.process-container{
+max-width:1200px;
+margin:auto;
+}
+
+/* TITLE */
+
+.process-title{
+font-size:38px;
+color:black;
+margin-bottom:10px;
+}
+
+/* DIVIDER */
+
+.process-divider{
+width:90px;
+height:4px;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+margin:10px auto 20px;
+border-radius:3px;
+}
+
+/* SUB TEXT */
+
+.process-sub{
+max-width:650px;
+margin:auto;
+margin-bottom:60px;
+color:#555;
+line-height:1.7;
+}
+
+/* GRID */
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+/* CARD */
+
+.process-card{
+background:white;
+padding:25px;
+border-radius:12px;
+border:1px solid #e6e6e6;
+border-top:4px solid transparent;
+border-image:linear-gradient(90deg,#00F0FF,#0000FF) 1;
+text-align:left;
+transition:0.35s;
+position:relative;
+}
+
+.process-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+
+.process-img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+/* STEP NUMBER */
+
+.step{
+display:inline-block;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+color:white;
+font-size:13px;
+font-weight:700;
+padding:6px 14px;
+border-radius:4px;
+margin-bottom:12px;
+letter-spacing:1px;
+}
+
+/* TITLE */
+
+.process-card h3{
+margin-bottom:10px;
+color:black;
+font-size:18px;
+}
+
+/* TEXT */
+
+.process-card p{
+color:#555;
+font-size:14px;
+line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.process-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.process-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+<section class="platform-section" id="platform">
+
+<div class="platform-container">
+
+<h2 class="platform-title">HygieneOps Platform Capabilities</h2>
+
+<div class="platform-divider"></div>
+
+<p class="platform-sub">
+HygieneOps Copilot transforms sanitation from static documentation
+into a real-time operational control system for food manufacturing.
+</p>
+
+
+<div class="platform-grid">
+
+<!-- CARD 1 -->
+
+<div class="platform-card">
+
+<img src="platform1.jpg" class="platform-img">
+
+<h3>Executable SSOP Engine</h3>
+
+<p class="short-text">
+Turn static cleaning procedures into enforceable workflows.
+</p>
+
+<p class="more-text">
+HygieneOps converts Sanitation Standard Operating Procedures
+into machine-enforceable workflow graphs with dependencies,
+timers, release gates and mandatory proof capture. This
+ensures every sanitation step is executed correctly before
+production can restart.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="platform-card">
+
+<img src="platform2.jpg" class="platform-img">
+
+<h3>Verification-Driven Hygiene Control</h3>
+
+<p class="short-text">
+Automatically respond to failed hygiene verification.
+</p>
+
+<p class="more-text">
+ATP, microbiological and allergen verification tests
+are directly connected to cleaning workflows. If a
+verification fails, the system automatically triggers
+a targeted re-clean process until the hygiene
+standard is achieved.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="platform-card">
+
+<img src="platform3.jpg" class="platform-img">
+
+<h3>Risk-Based Hygiene Scheduling</h3>
+
+<p class="short-text">
+Focus sanitation effort where risk is highest.
+</p>
+
+<p class="more-text">
+The platform allocates cleaning resources dynamically
+based on allergen risk, equipment complexity and
+historical hygiene failures. This ensures labour and
+cleaning resources are focused on high-risk assets
+instead of fixed time schedules.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 4 -->
+
+<div class="platform-card">
+
+<img src="platform4.jpg" class="platform-img">
+
+<h3>AI Multilingual Training</h3>
+
+<p class="short-text">
+Train operators directly on the shop floor.
+</p>
+
+<p class="more-text">
+The AI training studio automatically generates
+short multilingual micro-videos explaining how to
+perform cleaning tasks correctly. This helps
+new staff and agency workers learn procedures
+instantly and reduces execution errors.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 5 -->
+
+<div class="platform-card">
+
+<img src="platform5.jpg" class="platform-img">
+
+<h3>Evidence Quality Scoring</h3>
+
+<p class="short-text">
+Detect weak or suspicious hygiene records.
+</p>
+
+<p class="more-text">
+The platform analyses cleaning evidence such as
+timestamps, photos and verification results to
+identify suspicious records or missing proof.
+Quality teams can resolve evidence gaps before
+auditors review the data.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 6 -->
+
+<div class="platform-card">
+
+<img src="platform6.jpg" class="platform-img">
+
+<h3>Audit Evidence Pack Generator</h3>
+
+<p class="short-text">
+Generate audit-ready compliance reports instantly.
+</p>
+
+<p class="more-text">
+HygieneOps compiles complete evidence packs
+for BRCGS, HACCP and food safety inspections.
+Execution logs, verification results and corrective
+actions are automatically assembled into
+structured audit reports.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.platform-section{
+padding:120px 8%;
+background:linear-gradient(135deg,#00F0FF,#0000FF);
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+color:white;
+}
+
+/* TITLE */
+
+.platform-title{
+font-size:38px;
+margin-bottom:10px;
+}
+
+/* DIVIDER */
+
+.platform-divider{
+width:90px;
+height:4px;
+background:white;
+margin:10px auto 20px;
+border-radius:3px;
+}
+
+.platform-sub{
+max-width:650px;
+margin:auto;
+margin-bottom:60px;
+line-height:1.6;
+color:#D9F6FF;
+}
+
+/* GRID */
+
+.platform-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+/* CARD */
+
+.platform-card{
+background:white;
+color:#333;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+text-align:left;
+}
+
+.platform-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+
+.platform-img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+/* TEXT */
+
+.platform-card h3{
+margin-bottom:8px;
+color:black;
+}
+
+.short-text{
+color:#555;
+margin-bottom:10px;
+}
+
+.more-text{
+display:none;
+font-size:14px;
+color:#555;
+line-height:1.6;
+margin-bottom:10px;
+}
+
+/* BUTTON */
+
+.learn-btn{
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+}
+
+.learn-btn:hover{
+opacity:0.9;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.platform-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+
+<script>
+
+const buttons = document.querySelectorAll(".learn-btn");
+
+buttons.forEach(btn => {
+
+btn.addEventListener("click", function(){
+
+const card = this.parentElement;
+const more = card.querySelector(".more-text");
+
+if(more.style.display === "block"){
+
+more.style.display = "none";
+this.innerText = "Learn More";
+
+}else{
+
+more.style.display = "block";
+this.innerText = "Show Less";
+
+}
+
+});
+
+});
+
+</script>
+<section class="pricing-section" id="pricing">
+
+<div class="pricing-container">
+
+<h2 class="pricing-title">HygieneOps Copilot Pricing</h2>
+
+<div class="title-divider"></div>
+
+<p class="pricing-sub">
+Flexible SaaS pricing for food manufacturers to digitize sanitation
+workflows and maintain real-time audit-ready compliance.
+</p>
+
+
+<div class="pricing-grid">
+
+<!-- ESSENTIALS -->
+
+<div class="pricing-card">
+
+<h3>Essentials</h3>
+
+<p class="price">£1,250 / month</p>
+
+<div class="card-divider"></div>
+
+<ul>
+<li><span class="tick">✓</span> Executable SSOP Engine</li>
+<li><span class="tick">✓</span> Digital Hygiene Workflows</li>
+<li><span class="tick">✓</span> Task Scheduling</li>
+<li><span class="tick">✓</span> Basic Audit Exports</li>
+<li><span class="tick">✓</span> Single-Site Deployment</li>
+</ul>
+
+<button onclick="selectPlan('Essentials')">Start Essentials</button>
+
+</div>
+
+
+<!-- PROFESSIONAL -->
+
+<div class="pricing-card pro-card">
+
+<div class="pro-badge">Most Popular</div>
+
+<h3>Professional</h3>
+
+<p class="price">£2,250 / month</p>
+
+<div class="card-divider"></div>
+
+<ul>
+<li><span class="tick">✓</span> Everything in Essentials</li>
+<li><span class="tick">✓</span> Risk-Based Hygiene Scheduling</li>
+<li><span class="tick">✓</span> Automated Corrective Workflows</li>
+<li><span class="tick">✓</span> Role-Based Permissions</li>
+<li><span class="tick">✓</span> Compliance Monitoring</li>
+</ul>
+
+<button onclick="selectPlan('Professional')">Start Professional</button>
+
+</div>
+
+
+<!-- ENTERPRISE -->
+
+<div class="pricing-card">
+
+<h3>Enterprise</h3>
+
+<p class="price">Starting £3,750 / month</p>
+
+<div class="card-divider"></div>
+
+<ul>
+<li><span class="tick">✓</span> Multi-Site Deployment</li>
+<li><span class="tick">✓</span> Governance Dashboards</li>
+<li><span class="tick">✓</span> Cross-Site Benchmarking</li>
+<li><span class="tick">✓</span> API & System Integrations</li>
+<li><span class="tick">✓</span> Dedicated Implementation Support</li>
+</ul>
+
+<button onclick="selectPlan('Enterprise')">Contact Sales</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.pricing-section{
+padding:120px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+/* TITLE */
+
+.pricing-title{
+font-size:38px;
+color:black;
+margin-bottom:8px;
+}
+
+/* TITLE DIVIDER */
+
+.title-divider{
+width:80px;
+height:4px;
+margin:10px auto 20px;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+border-radius:3px;
+}
+
+.pricing-sub{
+color:#666;
+margin-bottom:60px;
+}
+
+/* GRID */
+
+.pricing-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+/* CARD */
+
+.pricing-card{
+background:white;
+padding:40px 30px;
+border-radius:12px;
+border:1px solid #e6e6e6;
+transition:0.3s;
+position:relative;
+}
+
+.pricing-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* PRO CARD */
+
+.pro-card{
+border:2px solid #00F0FF;
+transform:scale(1.05);
+}
+
+/* BADGE */
+
+.pro-badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#0000FF;
+color:white;
+font-size:12px;
+padding:6px 18px;
+border-radius:20px;
+}
+
+/* PRICE */
+
+.price{
+margin:15px 0 10px;
+font-size:22px;
+font-weight:600;
+color:#0000FF;
+}
+
+/* SMALL CARD DIVIDER */
+
+.card-divider{
+height:2px;
+width:60px;
+margin:15px auto 20px;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+border-radius:2px;
+}
+
+/* LIST */
+
+.pricing-card ul{
+list-style:none;
+padding:0;
+margin-bottom:25px;
+text-align:left;
+}
+
+.pricing-card li{
+margin:10px 0;
+color:#444;
+font-size:14px;
+}
+
+/* TICK */
+
+.tick{
+color:#00F0FF;
+font-weight:bold;
+margin-right:8px;
+}
+
+/* BUTTON */
+
+.pricing-card button{
+padding:12px 24px;
+border:none;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.pricing-card button:hover{
+transform:translateY(-2px);
+opacity:0.9;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.pricing-grid{
+grid-template-columns:1fr;
+}
+
+.pro-card{
+transform:none;
+}
+
+}
+
+</style>
+
+<script>
+
+function selectPlan(plan){
+
+alert("Your plan selected: " + plan);
+
+document.getElementById("contact").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+<section class="faq-section" id="faq">
+
+<div class="faq-container">
+
+<h2 class="faq-title">Frequently Asked Questions</h2>
+
+<div class="faq-divider"><span>◆</span></div>
+
+<p class="faq-sub">
+Learn more about HygieneOps Copilot and how the platform
+transforms food manufacturing hygiene into a real-time
+operational control system.
+</p>
+
+
+<div class="faq-list">
+
+<!-- FAQ 1 -->
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>What is HygieneOps Copilot?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+HygieneOps Copilot is an AI-powered hygiene execution platform
+designed for food manufacturers. It converts sanitation procedures
+into machine-enforceable workflows and ensures audit-ready
+compliance through real-time monitoring and verification.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 2 -->
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>What problem does the platform solve?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+Many factories rely on paper logs and static procedures that
+cannot guarantee correct cleaning. HygieneOps Copilot replaces
+these systems with step-by-step digital workflows that guide
+operators and enforce proper sanitation execution.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 3 -->
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>How does the verification system work?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+The platform links verification tests such as ATP, allergen,
+and microbiological checks directly to cleaning workflows.
+If a verification fails, the system automatically generates
+corrective re-clean tasks until the hygiene standard is met.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 4 -->
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>Who is the platform designed for?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+HygieneOps Copilot is designed for food manufacturing companies,
+hygiene teams, quality assurance managers, and production
+supervisors who need reliable sanitation control and
+audit-ready compliance.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 5 -->
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>How does the platform improve audit readiness?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+The system automatically records execution steps, verification
+results, and corrective actions. This creates a complete
+evidence chain that can generate audit-ready reports for
+BRCGS, HACCP, and food safety inspections.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 6 -->
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>Can HygieneOps Copilot scale across multiple factories?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+Yes. The platform uses a cloud-based SaaS architecture that
+can be deployed across multiple production sites using
+standard mobile devices without requiring specialized
+hardware installation.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.faq-section{
+padding:120px 8%;
+background:linear-gradient(135deg,#00F0FF,#0000FF);
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* CONTAINER */
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+
+/* TITLE */
+
+.faq-title{
+text-align:center;
+color:black;
+font-size:36px;
+margin-bottom:10px;
+}
+
+
+/* SUBTEXT */
+
+.faq-sub{
+text-align:center;
+color:white;
+margin-bottom:45px;
+}
+
+
+/* DIVIDER */
+
+.faq-divider{
+display:flex;
+align-items:center;
+margin:14px 0 30px 0;
+}
+
+.faq-divider::before,
+.faq-divider::after{
+content:"";
+flex:1;
+height:1px;
+background:rgba(0,0,0,0.3);
+}
+
+.faq-divider::before{
+margin-right:10px;
+}
+
+.faq-divider::after{
+margin-left:10px;
+}
+
+.faq-divider span{
+color:black;
+font-size:14px;
+}
+
+
+/* LIST */
+
+.faq-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+
+/* FAQ BOX */
+
+.faq-item{
+background:white;
+border-radius:10px;
+padding:18px 20px;
+transition:0.3s;
+}
+
+
+/* HOVER */
+
+.faq-item:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+/* QUESTION */
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+color:black;
+font-size:16px;
+font-weight:600;
+}
+
+
+/* BUTTON */
+
+.toggle{
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+border:none;
+color:white;
+font-size:18px;
+width:32px;
+height:32px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+
+/* ANSWER */
+
+.faq-answer{
+display:none;
+margin-top:12px;
+}
+
+.faq-answer p{
+color:#444;
+line-height:1.7;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.faq-title{
+font-size:28px;
+}
+
+}
+
+</style>
+
+
+<script>
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(q=>{
+
+q.addEventListener("click",()=>{
+
+const answer = q.nextElementSibling;
+const btn = q.querySelector(".toggle");
+
+if(answer.style.display === "block"){
+
+answer.style.display = "none";
+btn.innerHTML = "+";
+
+}else{
+
+document.querySelectorAll(".faq-answer").forEach(a=>{
+a.style.display = "none";
+});
+
+document.querySelectorAll(".toggle").forEach(b=>{
+b.innerHTML = "+";
+});
+
+answer.style.display = "block";
+btn.innerHTML = "−";
+
+}
+
+});
+
+});
+
+</script>
+
+<section class="contact-section" id="contact">
+
+<div class="contact-container">
+
+<!-- LEFT SIDE -->
+
+<div class="contact-left">
+
+<h2>Contact HygieneOps Team</h2>
+
+<p class="contact-text">
+Have questions about HygieneOps Copilot or want to see how our
+AI-powered hygiene execution platform can transform sanitation
+and compliance in your manufacturing operations?
+Our team is ready to support your organization.
+</p>
+
+<!-- SINGLE INFO BOX -->
+
+<div class="info-box">
+
+<div class="contact-item">
+<div>
+<h3>Phone</h3>
+<p>+44 7388285438</p>
+</div>
+</div>
+
+<div class="contact-item">
+<div>
+<h3>Email</h3>
+<p>hygieneopsplatformuk@outlook.com</p>
+</div>
+</div>
+<div class="contact-item">
+  <div>
+    <h3>Location</h3>
+    <p>Scotland, United Kingdom</p>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="contact-right">
+
+<form class="contact-form"
+action="https://api.web3forms.com/submit"
+method="POST">
+
+<input type="hidden" name="access_key" value="YOUR-KEY">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="message" rows="4" placeholder="Write your message"></textarea>
+
+<button type="submit">Send Message</button>
+
+<p class="note">
+Our team will respond within 24 hours.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.contact-section{
+padding:120px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* CONTAINER */
+
+.contact-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+
+/* LEFT */
+
+.contact-left h2{
+font-size:38px;
+color:black;
+margin-bottom:20px;
+}
+
+.contact-text{
+color:#555;
+line-height:1.8;
+margin-bottom:35px;
+max-width:480px;
+}
+
+
+/* SINGLE INFO BOX */
+
+.info-box{
+background:#F5FCFF;
+border-left:4px solid #00F0FF;
+padding:25px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+gap:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* ITEMS */
+
+.contact-item{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.contact-item span{
+font-size:22px;
+}
+
+.contact-item h3{
+font-size:16px;
+color:black;
+margin-bottom:2px;
+}
+
+.contact-item p{
+font-size:14px;
+color:#444;
+}
+
+
+/* FORM */
+
+.contact-form{
+background:#ffffff;
+padding:40px;
+border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,0.06);
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+
+/* INPUT */
+
+.contact-form input,
+.contact-form textarea{
+padding:13px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+outline:none;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:#00F0FF;
+box-shadow:0 0 0 2px rgba(0,240,255,0.15);
+}
+
+
+/* BUTTON */
+
+.contact-form button{
+margin-top:8px;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
+color:white;
+border:none;
+padding:13px;
+font-weight:600;
+letter-spacing:1px;
+cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 25px rgba(0,0,255,0.3);
+}
+
+
+/* NOTE */
+
+.note{
+font-size:12px;
+color:#777;
+margin-top:6px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+.contact-left{
+text-align:center;
+}
+
+.contact-text{
+margin:auto;
+}
+
+.info-box{
+max-width:350px;
+margin:auto;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function(){
+alert("Message Sent Successfully!");
+});
+
+</script>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-left">
+
+<h3>HygieneOps Copilot</h3>
+
+<p>
+AI-powered hygiene execution platform designed for food manufacturers.
+The system converts sanitation procedures into machine-enforceable
+workflows, ensuring audit-ready compliance, real-time verification,
+and safer food production environments.
+</p>
+
+</div>
+
+
+<!-- CENTER -->
+<div class="footer-links">
+
+<h4>Platform</h4>
+
+<a href="#home">Home</a>
+<a href="#process">Process</a>
+<a href="#platform">Platform</a>
+<a href="#pricing">Pricing</a>
+
+</div>
+
+
+<!-- RIGHT -->
+<div class="footer-links">
+
+<h4>Company</h4>
+
+<a href="#about">About Us</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+
+<!-- BOTTOM -->
+
+<div class="footer-bottom">
+
+<p>© 2026 HygieneOps Copilot. All rights reserved.</p>
+
+<button class="top-btn" onclick="scrollTopBtn()">↑</button>
+
+</div>
+
+</footer>
+
+
+<style>
+
+/* FOOTER */
+
+.footer{
+background: linear-gradient(135deg,#00F0FF,#0000FF);
+color:#ffffff;
+padding:60px 8% 25px;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* CONTAINER */
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:40px;
+}
+
+
+/* LEFT */
+
+.footer-left h3{
+margin-bottom:12px;
+font-size:22px;
+color:#000000;
+}
+
+.footer-left p{
+font-size:14px;
+line-height:1.6;
+color:#d9f6ff;
+}
+
+
+/* LINKS */
+
+.footer-links{
+display:flex;
+flex-direction:column;
+}
+
+.footer-links h4{
+margin-bottom:12px;
+color:#000000;
+}
+
+.footer-links a{
+text-decoration:none;
+color:#d9f6ff;
+margin-bottom:8px;
+font-size:14px;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#ffffff;
+transform:translateX(3px);
+}
+
+
+/* BOTTOM */
+
+.footer-bottom{
+max-width:1100px;
+margin:35px auto 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid rgba(255,255,255,0.25);
+padding-top:15px;
+font-size:13px;
+color:#000000;
+}
+
+
+/* TOP BUTTON */
+
+.top-btn{
+background:#ffffff;
+color:#0000FF;
+border:none;
+width:35px;
+height:35px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.top-btn:hover{
+background:#00F0FF;
+color:#000;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.footer-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.footer-bottom{
+flex-direction:column;
+gap:10px;
+}
+
+}
+
+</style>
+
+
+<script>
+
+function scrollTopBtn(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+</script>
+
+</body>
+</html>
+
+
+
