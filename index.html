@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SmartPayPlatform</title>
+<title>HygieneOps Copilot</title>
 
 <style>
 
@@ -293,7 +293,7 @@ grid-template-columns:1fr;
 
 <div class="nav-container">
 
-<div class="logo">SmartPayPlatform</div>
+<div class="logo">HygieneOps Copilot</div>
 
 <div class="nav-links" id="navLinks">
 
@@ -315,7 +315,7 @@ grid-template-columns:1fr;
 
 <div class="nav-container">
 
-<div class="logo">SmartPayPlatform</div>
+<div class="logo">HygieneOps Copilot</div>
 
 <nav id="navMenu">
 
@@ -347,19 +347,7 @@ grid-template-columns:1fr;
 
 .navbar{
 width:100%;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 padding:11px 8%;
 position:fixed;
 top:0;
@@ -447,19 +435,7 @@ position:absolute;
 top:70px;
 left:0;
 width:100%;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 flex-direction:column;
 padding:25px 0;
 gap:20px;
@@ -520,7 +496,7 @@ behavior:"smooth"
 });
 
 </script>
-<section class="hero-section" id="home"> 
+<section class="hero-section" id="home">
 
 <div class="hero-container">
 
@@ -528,19 +504,15 @@ behavior:"smooth"
 
 <div class="hero-left">
 
-<h1>AI-Powered Fraud Detection & Payment Intelligence Platform</h1>
+<h1>AI-Powered Hygiene Execution Platform for Food Manufacturing</h1>
 
 <div class="hero-divider"></div>
 
 <p class="hero-text">
-SmartPayPlatform is an AI-driven fraud detection and payment optimisation
-solution built for fintech companies, payment service providers, and
-high-volume digital businesses.
-
-The platform enables real-time transaction monitoring, predictive fraud
-scoring before authorisation, and automated compliance reporting
-helping businesses reduce fraud risk, improve decision-making, and
-operate with confidence at scale.
+HygieneOps Copilot transforms sanitation procedures into
+machine-enforceable digital workflows. It guides operators,
+verifies cleaning results, and replaces paper logs with
+real-time audit-ready hygiene compliance.
 </p>
 
 <div class="hero-buttons">
@@ -558,13 +530,14 @@ operate with confidence at scale.
 
 <div class="hero-right">
 
-<img src="sm.png" alt="SmartPayPlatform Dashboard">
+<img src="hy.jpeg" alt="HygieneOps Copilot Dashboard">
 
 </div>
 
 </div>
 
 </section>
+
 
 
 <style>
@@ -588,11 +561,11 @@ gap:60px;
 align-items:center;
 }
 
-/* LEFT */
+/* LEFT SIDE */
 
 .hero-left h1{
 font-size:46px;
-color:#033E3E;
+color:black;
 margin-bottom:10px;
 line-height:1.2;
 }
@@ -602,7 +575,7 @@ line-height:1.2;
 .hero-divider{
 width:80px;
 height:4px;
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 margin:15px 0 20px;
 border-radius:3px;
 }
@@ -610,7 +583,7 @@ border-radius:3px;
 /* TEXT */
 
 .hero-text{
-color:#3C565B;
+color:#555;
 font-size:17px;
 line-height:1.7;
 margin-bottom:30px;
@@ -627,20 +600,7 @@ gap:15px;
 /* PRIMARY BUTTON */
 
 .btn-primary{
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
-
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 color:white;
 padding:13px 26px;
 border-radius:6px;
@@ -650,15 +610,15 @@ transition:0.3s;
 }
 
 .btn-primary:hover{
-background:#045F5F;
 transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* SECONDARY BUTTON */
 
 .btn-secondary{
-border:2px solid #008080;
-color:#008080;
+border:2px solid #0000FF;
+color:#0000FF;
 padding:13px 26px;
 border-radius:6px;
 text-decoration:none;
@@ -667,16 +627,16 @@ transition:0.3s;
 }
 
 .btn-secondary:hover{
-background:#008080;
+background:#0000FF;
 color:white;
 }
 
-/* IMAGE */
+/* RIGHT IMAGE */
 
 .hero-right img{
 width:100%;
 border-radius:12px;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 
@@ -721,9 +681,10 @@ margin-top:20px;
 </style>
 
 
+
 <script>
 
-/* SMOOTH SCROLL */
+/* Smooth Scroll */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
@@ -740,7 +701,7 @@ behavior:"smooth"
 });
 
 </script>
-<section class="about-section" id="about"> 
+<section class="about-section" id="about">
 
 <div class="about-container">
 
@@ -748,31 +709,31 @@ behavior:"smooth"
 
 <div class="about-left">
 
-<h2>About SmartPayPlatform</h2>
+<h2>About HygieneOps Copilot</h2>
 
 <div class="about-divider"></div>
 
 <p>
-SmartPayPlatform is an AI-driven fraud detection and payment optimisation
-platform built for fintech companies, payment service providers, and
-high-volume digital businesses. It transforms traditional fraud prevention
-into a real-time, intelligent decision system that identifies risk before
-transactions are completed.
+HygieneOps Copilot is an advanced hygiene execution platform
+built for food manufacturers. The system transforms traditional
+sanitation procedures into machine-enforceable digital workflows
+that guide operators step-by-step and verify cleaning outcomes
+through real-time evidence and testing.
 </p>
 
 <p>
-By combining machine learning, behavioural analytics, and automated workflows,
-SmartPayPlatform enables organizations to reduce fraud losses, improve
-operational efficiency, and maintain compliance with financial regulations
-such as FCA, PSD2, and GDPR — without requiring complex infrastructure changes.
+By replacing paper-based SSOP records with intelligent operational
+control, the platform ensures consistent sanitation execution,
+reduces contamination risks, and generates audit-ready compliance
+evidence aligned with BRCGS and HACCP standards.
 </p>
 
 <div class="about-features">
 
-<div class="feature">Real-Time Fraud Monitoring</div>
-<div class="feature">Predictive Risk Scoring</div>
-<div class="feature">Multi-PSP Integration</div>
-<div class="feature">Automated Compliance Reporting</div>
+<div class="feature">Executable SSOP Workflows</div>
+<div class="feature">Real-Time Hygiene Verification</div>
+<div class="feature">Closed-Loop Corrective Actions</div>
+<div class="feature">Audit-Ready Evidence Reports</div>
 
 </div>
 
@@ -790,22 +751,22 @@ such as FCA, PSD2, and GDPR — without requiring complex infrastructure changes
 <div class="founder-divider"></div>
 
 <p>
-<strong>Abhishek Sanghani</strong> founded SmartPayPlatform with a
-vision to make advanced fraud detection accessible to fintech
-companies and digital businesses operating at scale.
+<strong>Sahul Sajeevan</strong> founded HygieneOps Copilot with the
+vision of transforming how food manufacturers manage
+sanitation and compliance. The company focuses on
+building advanced operational technology that converts
+traditional hygiene procedures into intelligent,
+machine-enforceable workflows.
 </p>
 
 <p>
-The platform is designed to bridge the gap between complex
-enterprise fraud systems and lightweight solutions by delivering
-predictive intelligence, operational automation, and regulatory
-alignment in a single SaaS platform.
-</p>
-
-<p>
-SmartPayPlatform focuses on enabling businesses to detect fraud
-before financial damage occurs, improve transaction trust, and
-build scalable payment infrastructure with confidence.
+HygieneOps Copilot is designed to help manufacturing
+teams achieve consistent sanitation execution,
+real-time verification, and audit-ready compliance.
+By combining automation, operational intelligence,
+and AI-driven guidance, the platform enables food
+manufacturers to strengthen food safety, reduce
+operational risks, and maintain regulatory confidence.
 </p>
 
 <a href="#" class="linkedin-btn">LinkedIn</a>
@@ -826,19 +787,7 @@ build scalable payment infrastructure with confidence.
 
 .about-section{
 padding:140px 8%;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(135deg,#00F0FF,#0000FF);
 font-family:'Segoe UI',sans-serif;
 }
 
@@ -872,7 +821,7 @@ border-radius:3px;
 }
 
 .about-left p{
-color:#E6FFFF;
+color:#ffffff;
 line-height:1.8;
 margin-bottom:20px;
 font-size:16px;
@@ -890,7 +839,7 @@ gap:12px;
 
 .feature{
 background:white;
-color:#033E3E;
+color:#0000FF;
 padding:10px 14px;
 border-radius:6px;
 font-size:14px;
@@ -908,15 +857,15 @@ box-shadow:0 12px 35px rgba(0,0,0,0.2);
 
 .founder-title{
 margin-bottom:5px;
-color:#033E3E;
+color:black;
 }
 
-/* DIVIDER */
+/* FOUNDER DIVIDER */
 
 .founder-divider{
 width:60px;
 height:3px;
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 margin-bottom:15px;
 border-radius:2px;
 }
@@ -927,12 +876,12 @@ line-height:1.7;
 margin-bottom:18px;
 }
 
-/* BUTTON */
+/* LINKEDIN BUTTON */
 
 .linkedin-btn{
 display:inline-block;
 padding:10px 18px;
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 color:white;
 text-decoration:none;
 border-radius:6px;
@@ -940,19 +889,7 @@ font-weight:600;
 }
 
 .linkedin-btn:hover{
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+opacity:0.9;
 }
 
 /* MOBILE */
@@ -1000,85 +937,97 @@ margin:12px auto 18px auto;
 
 <div class="process-container">
 
-<h2 class="process-title">How SmartPayPlatform Works</h2>
+<h2 class="process-title">How HygieneOps Copilot Works</h2>
 
 <div class="process-divider"></div>
 
 <p class="process-sub">
-SmartPayPlatform transforms traditional fraud detection into a real-time,
-AI-driven decision system that prevents fraud before transactions are completed.
+HygieneOps Copilot transforms sanitation from paper documentation
+into a real-time operational control system.
 </p>
 
 
 <div class="process-grid">
 
 <!-- STEP 1 -->
+
 <div class="process-card">
 
-<img src="sm1.png" class="process-img">
+<img src="hy1.jpeg" class="process-img">
 
 <div class="step">01</div>
 
-<h3>System Integration</h3>
+<h3>SSOP Digitization</h3>
 
 <p>
-SmartPayPlatform connects securely with payment gateways,
-PSPs, and financial systems via APIs, enabling real-time
-access to transaction data across multiple payment channels.
+Existing sanitation procedures are converted from static
+documents into machine-enforceable digital workflows.
+Each cleaning task includes required steps, timers,
+chemical checks, and mandatory proof capture to
+ensure correct execution.
 </p>
 
 </div>
 
 
 <!-- STEP 2 -->
+
 <div class="process-card">
 
-<img src="sm2.png" class="process-img">
+<img src="hy2.jpeg" class="process-img">
 
 <div class="step">02</div>
 
-<h3>Real-Time Transaction Analysis</h3>
+<h3>Guided Hygiene Execution</h3>
 
 <p>
-Every transaction is analyzed instantly using machine learning
-models that evaluate behavioural patterns, device data, and
-historical activity to identify anomalies.
+Operators receive step-by-step cleaning instructions
+directly on mobile devices in their native language.
+The system guides staff through correct procedures,
+reducing interpretation errors and ensuring consistent
+sanitation across shifts.
 </p>
 
 </div>
 
 
 <!-- STEP 3 -->
+
 <div class="process-card">
 
-<img src="sm3.png" class="process-img">
+<img src="hy3.jpeg" class="process-img">
 
 <div class="step">03</div>
 
-<h3>Predictive Fraud Decisioning</h3>
+<h3>Verification & Corrective Control</h3>
 
 <p>
-Each transaction is assigned a fraud risk score before
-authorisation, enabling businesses to approve, block,
-or trigger additional verification in real time.
+Verification tests such as ATP, allergen, and
+microbiological checks validate cleaning results.
+If a verification fails, the platform automatically
+triggers targeted re-clean workflows until
+a verified hygiene pass is achieved.
 </p>
 
 </div>
 
 
 <!-- STEP 4 -->
+
 <div class="process-card">
 
-<img src="sm4.png" class="process-img">
+<img src="hy4.jpeg" class="process-img">
 
 <div class="step">04</div>
 
-<h3>Automation & Compliance Reporting</h3>
+<h3>Audit-Ready Compliance</h3>
 
 <p>
-Fraud workflows are automated and all actions are logged into
-audit-ready reports aligned with FCA, PSD2, and GDPR,
-ensuring compliance and operational transparency.
+All sanitation actions, verification results,
+and corrective actions are recorded in a
+structured evidence chain. The system generates
+instant audit evidence packs aligned with
+BRCGS, HACCP, and food safety inspections.
 </p>
 
 </div>
@@ -1112,7 +1061,7 @@ margin:auto;
 
 .process-title{
 font-size:38px;
-color:#033E3E;
+color:black;
 margin-bottom:10px;
 }
 
@@ -1121,18 +1070,18 @@ margin-bottom:10px;
 .process-divider{
 width:90px;
 height:4px;
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 margin:10px auto 20px;
 border-radius:3px;
 }
 
-/* SUBTEXT */
+/* SUB TEXT */
 
 .process-sub{
 max-width:650px;
 margin:auto;
 margin-bottom:60px;
-color:#3C565B;
+color:#555;
 line-height:1.7;
 }
 
@@ -1151,7 +1100,8 @@ background:white;
 padding:25px;
 border-radius:12px;
 border:1px solid #e6e6e6;
-border-top:4px solid #008080;
+border-top:4px solid transparent;
+border-image:linear-gradient(90deg,#00F0FF,#0000FF) 1;
 text-align:left;
 transition:0.35s;
 position:relative;
@@ -1172,36 +1122,25 @@ border-radius:8px;
 margin-bottom:15px;
 }
 
-/* STEP */
+/* STEP NUMBER */
 
 .step{
 display:inline-block;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 color:white;
 font-size:13px;
 font-weight:700;
 padding:6px 14px;
 border-radius:4px;
 margin-bottom:12px;
+letter-spacing:1px;
 }
 
 /* TITLE */
 
 .process-card h3{
 margin-bottom:10px;
-color:#033E3E;
+color:black;
 font-size:18px;
 }
 
@@ -1216,15 +1155,19 @@ line-height:1.6;
 /* MOBILE */
 
 @media(max-width:1000px){
+
 .process-grid{
 grid-template-columns:repeat(2,1fr);
 }
+
 }
 
 @media(max-width:600px){
+
 .process-grid{
 grid-template-columns:1fr;
 }
+
 }
 
 </style>
@@ -1232,34 +1175,36 @@ grid-template-columns:1fr;
 
 <div class="platform-container">
 
-<h2 class="platform-title">SmartPayPlatform Capabilities</h2>
+<h2 class="platform-title">HygieneOps Platform Capabilities</h2>
 
 <div class="platform-divider"></div>
 
 <p class="platform-sub">
-SmartPayPlatform transforms payment systems into a real-time,
-AI-powered fraud intelligence platform for fintech companies
-and high-volume digital businesses.
+HygieneOps Copilot transforms sanitation from static documentation
+into a real-time operational control system for food manufacturing.
 </p>
 
 
 <div class="platform-grid">
 
 <!-- CARD 1 -->
+
 <div class="platform-card">
 
-<img src="sm5.png" class="platform-img">
+<img src="hy5.jpeg" class="platform-img">
 
-<h3>Real-Time Transaction Monitoring</h3>
+<h3>Executable SSOP Engine</h3>
 
 <p class="short-text">
-Monitor transactions instantly across systems.
+Turn static cleaning procedures into enforceable workflows.
 </p>
 
 <p class="more-text">
-SmartPayPlatform continuously analyzes transaction streams in real time,
-detecting anomalies using behavioural patterns, device intelligence,
-and transaction attributes before fraud occurs.
+HygieneOps converts Sanitation Standard Operating Procedures
+into machine-enforceable workflow graphs with dependencies,
+timers, release gates and mandatory proof capture. This
+ensures every sanitation step is executed correctly before
+production can restart.
 </p>
 
 <button class="learn-btn">Learn More</button>
@@ -1268,19 +1213,23 @@ and transaction attributes before fraud occurs.
 
 
 <!-- CARD 2 -->
+
 <div class="platform-card">
 
-<img src="sm6.png" class="platform-img">
+<img src="hy6.jpeg" class="platform-img">
 
-<h3>Predictive Fraud Risk Scoring</h3>
+<h3>Verification-Driven Hygiene Control</h3>
 
 <p class="short-text">
-Stop fraud before payment approval.
+Automatically respond to failed hygiene verification.
 </p>
 
 <p class="more-text">
-Each transaction is assigned a predictive risk score before authorisation,
-allowing businesses to block, verify, or approve payments proactively.
+ATP, microbiological and allergen verification tests
+are directly connected to cleaning workflows. If a
+verification fails, the system automatically triggers
+a targeted re-clean process until the hygiene
+standard is achieved.
 </p>
 
 <button class="learn-btn">Learn More</button>
@@ -1289,19 +1238,23 @@ allowing businesses to block, verify, or approve payments proactively.
 
 
 <!-- CARD 3 -->
+
 <div class="platform-card">
 
-<img src="sm7.png" class="platform-img">
+<img src="hy7.jpeg" class="platform-img">
 
-<h3>Multi-Provider Integration</h3>
+<h3>Risk-Based Hygiene Scheduling</h3>
 
 <p class="short-text">
-Unify monitoring across payment systems.
+Focus sanitation effort where risk is highest.
 </p>
 
 <p class="more-text">
-Integrates with multiple PSPs, APIs, and gateways, enabling centralized
-fraud monitoring across all payment channels without replacing infrastructure.
+The platform allocates cleaning resources dynamically
+based on allergen risk, equipment complexity and
+historical hygiene failures. This ensures labour and
+cleaning resources are focused on high-risk assets
+instead of fixed time schedules.
 </p>
 
 <button class="learn-btn">Learn More</button>
@@ -1310,19 +1263,23 @@ fraud monitoring across all payment channels without replacing infrastructure.
 
 
 <!-- CARD 4 -->
+
 <div class="platform-card">
 
-<img src="sm8.png" class="platform-img">
+<img src="hy8.jpeg" class="platform-img">
 
-<h3>Automated Fraud Workflows</h3>
+<h3>AI Multilingual Training</h3>
 
 <p class="short-text">
-Reduce manual investigation effort.
+Train operators directly on the shop floor.
 </p>
 
 <p class="more-text">
-Automates fraud investigation processes, prioritizes high-risk cases,
-and improves operational efficiency for fraud and compliance teams.
+The AI training studio automatically generates
+short multilingual micro-videos explaining how to
+perform cleaning tasks correctly. This helps
+new staff and agency workers learn procedures
+instantly and reduces execution errors.
 </p>
 
 <button class="learn-btn">Learn More</button>
@@ -1331,19 +1288,23 @@ and improves operational efficiency for fraud and compliance teams.
 
 
 <!-- CARD 5 -->
+
 <div class="platform-card">
 
-<img src="sm9.png" class="platform-img">
+<img src="hy9.jpeg" class="platform-img">
 
-<h3>Compliance & Audit Reporting</h3>
+<h3>Evidence Quality Scoring</h3>
 
 <p class="short-text">
-Stay aligned with regulations.
+Detect weak or suspicious hygiene records.
 </p>
 
 <p class="more-text">
-Generates audit-ready reports aligned with FCA, PSD2, and GDPR,
-ensuring full compliance and traceability of fraud decisions.
+The platform analyses cleaning evidence such as
+timestamps, photos and verification results to
+identify suspicious records or missing proof.
+Quality teams can resolve evidence gaps before
+auditors review the data.
 </p>
 
 <button class="learn-btn">Learn More</button>
@@ -1352,19 +1313,23 @@ ensuring full compliance and traceability of fraud decisions.
 
 
 <!-- CARD 6 -->
+
 <div class="platform-card">
 
-<img src="sm10.png" class="platform-img">
+<img src="hy10.jpeg" class="platform-img">
 
-<h3>Fraud Analytics Dashboard</h3>
+<h3>Audit Evidence Pack Generator</h3>
 
 <p class="short-text">
-Gain real-time insights and trends.
+Generate audit-ready compliance reports instantly.
 </p>
 
 <p class="more-text">
-Interactive dashboards provide fraud metrics, trends, and insights,
-helping businesses optimise fraud detection strategies and reduce losses.
+HygieneOps compiles complete evidence packs
+for BRCGS, HACCP and food safety inspections.
+Execution logs, verification results and corrective
+actions are automatically assembled into
+structured audit reports.
 </p>
 
 <button class="learn-btn">Learn More</button>
@@ -1385,19 +1350,7 @@ helping businesses optimise fraud detection strategies and reduce losses.
 
 .platform-section{
 padding:120px 8%;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(135deg,#00F0FF,#0000FF);
 font-family:'Segoe UI',sans-serif;
 text-align:center;
 color:white;
@@ -1419,8 +1372,6 @@ background:white;
 margin:10px auto 20px;
 border-radius:3px;
 }
-
-/* SUBTEXT */
 
 .platform-sub{
 max-width:650px;
@@ -1470,7 +1421,7 @@ margin-bottom:15px;
 
 .platform-card h3{
 margin-bottom:8px;
-color:#033E3E;
+color:black;
 }
 
 .short-text{
@@ -1489,19 +1440,7 @@ margin-bottom:10px;
 /* BUTTON */
 
 .learn-btn{
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 color:white;
 border:none;
 padding:10px 18px;
@@ -1511,15 +1450,17 @@ font-weight:600;
 }
 
 .learn-btn:hover{
-background:#045F5F;
+opacity:0.9;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
+
 .platform-grid{
 grid-template-columns:1fr;
 }
+
 }
 
 </style>
@@ -1557,63 +1498,62 @@ this.innerText = "Show Less";
 
 <div class="pricing-container">
 
-<h2 class="pricing-title">SmartPayPlatform Pricing</h2>
+<h2 class="pricing-title">HygieneOps Copilot Pricing</h2>
 
 <div class="title-divider"></div>
 
 <p class="pricing-sub">
-Flexible SaaS pricing designed for fintech companies, payment providers,
-and digital businesses to detect fraud in real time, reduce risk, and
-maintain compliance without complex infrastructure.
+Flexible SaaS pricing for food manufacturers to digitize sanitation
+workflows and maintain real-time audit-ready compliance.
 </p>
 
 
 <div class="pricing-grid">
 
-<!-- STARTER -->
+<!-- ESSENTIALS -->
 
 <div class="pricing-card">
 
-<h3>Starter</h3>
+<h3>Essentials</h3>
 
-<p class="price">£999 / month</p>
+<p class="price">£1,250 / month</p>
 
 <div class="card-divider"></div>
 
 <ul>
-<li><span class="tick">✓</span> Real-Time Transaction Monitoring</li>
-<li><span class="tick">✓</span> Basic Fraud Risk Scoring</li>
-<li><span class="tick">✓</span> Single Payment Integration</li>
-<li><span class="tick">✓</span> Standard Dashboard Access</li>
-<li><span class="tick">✓</span> Email Support</li>
+<li><span class="tick">✓</span> Executable SSOP Engine</li>
+<li><span class="tick">✓</span> Digital Hygiene Workflows</li>
+<li><span class="tick">✓</span> Task Scheduling</li>
+<li><span class="tick">✓</span> Basic Audit Exports</li>
+<li><span class="tick">✓</span> Single-Site Deployment</li>
 </ul>
 
-<button onclick="selectPlan('Starter')">Start Starter</button>
+<button onclick="selectPlan('Essentials')">Start Essentials</button>
 
 </div>
 
 
-<!-- GROWTH -->
+<!-- PROFESSIONAL -->
 
 <div class="pricing-card pro-card">
 
 <div class="pro-badge">Most Popular</div>
 
-<h3>Growth</h3>
+<h3>Professional</h3>
 
-<p class="price">£1,999 / month</p>
+<p class="price">£2,250 / month</p>
 
 <div class="card-divider"></div>
 
 <ul>
-<li><span class="tick">✓</span> Everything in Starter</li>
-<li><span class="tick">✓</span> Predictive Fraud Scoring</li>
-<li><span class="tick">✓</span> Multi-PSP Integration</li>
-<li><span class="tick">✓</span> Automated Fraud Workflows</li>
-<li><span class="tick">✓</span> Compliance Reporting (FCA, PSD2, GDPR)</li>
+<li><span class="tick">✓</span> Everything in Essentials</li>
+<li><span class="tick">✓</span> Risk-Based Hygiene Scheduling</li>
+<li><span class="tick">✓</span> Automated Corrective Workflows</li>
+<li><span class="tick">✓</span> Role-Based Permissions</li>
+<li><span class="tick">✓</span> Compliance Monitoring</li>
 </ul>
 
-<button onclick="selectPlan('Growth')">Start Growth</button>
+<button onclick="selectPlan('Professional')">Start Professional</button>
 
 </div>
 
@@ -1624,17 +1564,16 @@ maintain compliance without complex infrastructure.
 
 <h3>Enterprise</h3>
 
-<p class="price">Custom Pricing</p>
+<p class="price">Starting £3,750 / month</p>
 
 <div class="card-divider"></div>
 
 <ul>
-<li><span class="tick">✓</span> Full AI Fraud Intelligence Engine</li>
-<li><span class="tick">✓</span> Cross-Platform Payment Monitoring</li>
-<li><span class="tick">✓</span> Advanced Analytics & Dashboards</li>
-<li><span class="tick">✓</span> Dedicated Compliance & Audit Tools</li>
-<li><span class="tick">✓</span> API Access & Custom Integrations</li>
-<li><span class="tick">✓</span> Dedicated Support & Onboarding</li>
+<li><span class="tick">✓</span> Multi-Site Deployment</li>
+<li><span class="tick">✓</span> Governance Dashboards</li>
+<li><span class="tick">✓</span> Cross-Site Benchmarking</li>
+<li><span class="tick">✓</span> API & System Integrations</li>
+<li><span class="tick">✓</span> Dedicated Implementation Support</li>
 </ul>
 
 <button onclick="selectPlan('Enterprise')">Contact Sales</button>
@@ -1647,6 +1586,7 @@ maintain compliance without complex infrastructure.
 </div>
 
 </section>
+
 
 
 <style>
@@ -1664,22 +1604,22 @@ text-align:center;
 
 .pricing-title{
 font-size:38px;
-color:#033E3E;
+color:black;
 margin-bottom:8px;
 }
 
-/* DIVIDER */
+/* TITLE DIVIDER */
 
 .title-divider{
 width:80px;
 height:4px;
 margin:10px auto 20px;
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 border-radius:3px;
 }
 
 .pricing-sub{
-color:#3C565B;
+color:#666;
 margin-bottom:60px;
 }
 
@@ -1712,7 +1652,7 @@ box-shadow:0 20px 40px rgba(0,0,0,0.08);
 /* PRO CARD */
 
 .pro-card{
-border:2px solid #008080;
+border:2px solid #00F0FF;
 transform:scale(1.05);
 }
 
@@ -1723,19 +1663,7 @@ position:absolute;
 top:-12px;
 left:50%;
 transform:translateX(-50%);
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:#0000FF;
 color:white;
 font-size:12px;
 padding:6px 18px;
@@ -1748,16 +1676,16 @@ border-radius:20px;
 margin:15px 0 10px;
 font-size:22px;
 font-weight:600;
-color:#045F5F;
+color:#0000FF;
 }
 
-/* DIVIDER */
+/* SMALL CARD DIVIDER */
 
 .card-divider{
 height:2px;
 width:60px;
 margin:15px auto 20px;
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 border-radius:2px;
 }
 
@@ -1779,7 +1707,7 @@ font-size:14px;
 /* TICK */
 
 .tick{
-color:#008080;
+color:#00F0FF;
 font-weight:bold;
 margin-right:8px;
 }
@@ -1789,19 +1717,7 @@ margin-right:8px;
 .pricing-card button{
 padding:12px 24px;
 border:none;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 color:white;
 border-radius:6px;
 cursor:pointer;
@@ -1810,20 +1726,8 @@ transition:0.3s;
 }
 
 .pricing-card button:hover{
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
 transform:translateY(-2px);
+opacity:0.9;
 }
 
 /* MOBILE */
@@ -1842,12 +1746,11 @@ transform:none;
 
 </style>
 
-
 <script>
 
 function selectPlan(plan){
 
-alert("Selected plan: " + plan);
+alert("Your plan selected: " + plan);
 
 document.getElementById("contact").scrollIntoView({
 behavior:"smooth"
@@ -1865,100 +1768,137 @@ behavior:"smooth"
 <div class="faq-divider"><span>◆</span></div>
 
 <p class="faq-sub">
-Learn how SmartPayPlatform helps fintech companies and digital businesses
-detect fraud in real time, reduce risk, and optimise payment performance.
+Learn more about HygieneOps Copilot and how the platform
+transforms food manufacturing hygiene into a real-time
+operational control system.
 </p>
 
 
 <div class="faq-list">
 
 <!-- FAQ 1 -->
+
 <div class="faq-item">
+
 <div class="faq-question">
-<span>What is SmartPayPlatform?</span>
+<span>What is HygieneOps Copilot?</span>
 <button class="toggle">+</button>
 </div>
+
 <div class="faq-answer">
 <p>
-SmartPayPlatform is an AI-driven fraud detection and payment optimisation
-platform designed for fintech companies and high-volume digital businesses.
-It provides real-time transaction monitoring and predictive fraud scoring
-before payments are authorised.
+HygieneOps Copilot is an AI-powered hygiene execution platform
+designed for food manufacturers. It converts sanitation procedures
+into machine-enforceable workflows and ensures audit-ready
+compliance through real-time monitoring and verification.
 </p>
 </div>
+
 </div>
 
+
 <!-- FAQ 2 -->
+
 <div class="faq-item">
+
 <div class="faq-question">
 <span>What problem does the platform solve?</span>
 <button class="toggle">+</button>
 </div>
+
 <div class="faq-answer">
 <p>
-Many businesses rely on static or rule-based fraud systems that detect fraud
-only after transactions occur. SmartPayPlatform identifies risk before
-authorisation, helping prevent financial loss and reduce chargebacks.
+Many factories rely on paper logs and static procedures that
+cannot guarantee correct cleaning. HygieneOps Copilot replaces
+these systems with step-by-step digital workflows that guide
+operators and enforce proper sanitation execution.
 </p>
 </div>
+
 </div>
+
 
 <!-- FAQ 3 -->
+
 <div class="faq-item">
+
 <div class="faq-question">
-<span>How does fraud detection work?</span>
+<span>How does the verification system work?</span>
 <button class="toggle">+</button>
 </div>
+
 <div class="faq-answer">
 <p>
-The platform uses machine learning models to analyse transaction behaviour,
-device data, and historical patterns in real time. Each transaction is assigned
-a risk score, allowing businesses to approve, block, or verify payments instantly.
+The platform links verification tests such as ATP, allergen,
+and microbiological checks directly to cleaning workflows.
+If a verification fails, the system automatically generates
+corrective re-clean tasks until the hygiene standard is met.
 </p>
 </div>
+
 </div>
+
 
 <!-- FAQ 4 -->
+
 <div class="faq-item">
+
 <div class="faq-question">
-<span>Who is SmartPayPlatform designed for?</span>
+<span>Who is the platform designed for?</span>
 <button class="toggle">+</button>
 </div>
+
 <div class="faq-answer">
 <p>
-SmartPayPlatform is built for fintech companies, payment service providers,
-online platforms, and businesses handling high volumes of digital transactions.
+HygieneOps Copilot is designed for food manufacturing companies,
+hygiene teams, quality assurance managers, and production
+supervisors who need reliable sanitation control and
+audit-ready compliance.
 </p>
 </div>
+
 </div>
+
 
 <!-- FAQ 5 -->
+
 <div class="faq-item">
+
 <div class="faq-question">
-<span>Does the platform support compliance?</span>
+<span>How does the platform improve audit readiness?</span>
 <button class="toggle">+</button>
-</div>
-<div class="faq-answer">
-<p>
-Yes. SmartPayPlatform provides automated compliance reporting aligned with
-regulatory frameworks such as FCA, PSD2, and GDPR, ensuring audit-ready records.
-</p>
-</div>
 </div>
 
-<!-- FAQ 6 -->
-<div class="faq-item">
-<div class="faq-question">
-<span>Can SmartPayPlatform scale across multiple systems?</span>
-<button class="toggle">+</button>
-</div>
 <div class="faq-answer">
 <p>
-Yes. The platform integrates with multiple payment providers and APIs,
-allowing businesses to monitor transactions across different systems in
-one unified dashboard.
+The system automatically records execution steps, verification
+results, and corrective actions. This creates a complete
+evidence chain that can generate audit-ready reports for
+BRCGS, HACCP, and food safety inspections.
 </p>
 </div>
+
+</div>
+
+
+<!-- FAQ 6 -->
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>Can HygieneOps Copilot scale across multiple factories?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+Yes. The platform uses a cloud-based SaaS architecture that
+can be deployed across multiple production sites using
+standard mobile devices without requiring specialized
+hardware installation.
+</p>
+</div>
+
 </div>
 
 </div>
@@ -1974,21 +1914,10 @@ one unified dashboard.
 
 .faq-section{
 padding:120px 8%;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(135deg,#00F0FF,#0000FF);
 font-family:'Segoe UI',sans-serif;
 }
+
 
 /* CONTAINER */
 
@@ -1997,22 +1926,25 @@ max-width:900px;
 margin:auto;
 }
 
+
 /* TITLE */
 
 .faq-title{
 text-align:center;
-color:white;
+color:black;
 font-size:36px;
 margin-bottom:10px;
 }
+
 
 /* SUBTEXT */
 
 .faq-sub{
 text-align:center;
-color:#CFEFEF;
+color:white;
 margin-bottom:45px;
 }
+
 
 /* DIVIDER */
 
@@ -2027,14 +1959,22 @@ margin:14px 0 30px 0;
 content:"";
 flex:1;
 height:1px;
-background:rgba(255,255,255,0.3);
+background:rgba(0,0,0,0.3);
+}
+
+.faq-divider::before{
+margin-right:10px;
+}
+
+.faq-divider::after{
+margin-left:10px;
 }
 
 .faq-divider span{
-color:white;
+color:black;
 font-size:14px;
-padding:0 10px;
 }
+
 
 /* LIST */
 
@@ -2044,7 +1984,8 @@ flex-direction:column;
 gap:18px;
 }
 
-/* CARD */
+
+/* FAQ BOX */
 
 .faq-item{
 background:white;
@@ -2053,12 +1994,14 @@ padding:18px 20px;
 transition:0.3s;
 }
 
+
 /* HOVER */
 
 .faq-item:hover{
 transform:translateY(-4px);
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
+
 
 /* QUESTION */
 
@@ -2067,15 +2010,16 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 cursor:pointer;
-color:#033E3E;
+color:black;
 font-size:16px;
 font-weight:600;
 }
 
+
 /* BUTTON */
 
 .toggle{
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 border:none;
 color:white;
 font-size:18px;
@@ -2083,7 +2027,9 @@ width:32px;
 height:32px;
 border-radius:6px;
 cursor:pointer;
+font-weight:bold;
 }
+
 
 /* ANSWER */
 
@@ -2093,16 +2039,19 @@ margin-top:12px;
 }
 
 .faq-answer p{
-color:#3C565B;
+color:#444;
 line-height:1.7;
 }
+
 
 /* MOBILE */
 
 @media(max-width:900px){
+
 .faq-title{
 font-size:28px;
 }
+
 }
 
 </style>
@@ -2153,16 +2102,15 @@ btn.innerHTML = "−";
 
 <div class="contact-left">
 
-<h2>Contact SmartPayPlatform Team</h2>
+<h2>Contact HygieneOps Team</h2>
 
 <div class="contact-divider"></div>
 
 <p class="contact-text">
-Have questions about SmartPayPlatform or want to explore how our AI-driven
-fraud detection and payment optimisation platform can support your business?
-
-Our team is ready to help fintech companies, payment providers, and
-digital businesses reduce fraud risk and improve transaction efficiency.
+Have questions about HygieneOps Copilot or want to see how our
+AI-powered hygiene execution platform can transform sanitation
+and compliance in your manufacturing operations?
+Our team is ready to support your organization.
 </p>
 
 <!-- CONTACT INFO BOX -->
@@ -2170,6 +2118,7 @@ digital businesses reduce fraud risk and improve transaction efficiency.
 <div class="info-box">
 
 <div class="contact-item">
+
 <div>
 <h3>Phone</h3>
 <p>+44 7388285438</p>
@@ -2177,16 +2126,18 @@ digital businesses reduce fraud risk and improve transaction efficiency.
 </div>
 
 <div class="contact-item">
+
 <div>
 <h3>Email</h3>
-<p>smartpayplatformuk@outlook.com</p>
+<p>hygieneopsplatformuk@outlook.com</p>
 </div>
 </div>
 
 <div class="contact-item">
+
 <div>
 <h3>Location</h3>
-<p>United Kingdom</p>
+<p>Scotland, United Kingdom</p>
 </div>
 </div>
 
@@ -2203,7 +2154,7 @@ digital businesses reduce fraud risk and improve transaction efficiency.
 action="https://api.web3forms.com/submit"
 method="POST">
 
-<input type="hidden" name="access_key" value="2735774c-3360-4105-bb28-8e47d5ec0c00">
+<input type="hidden" name="access_key" value="20accb74-c1d2-4e59-94a3-8ec35b17c05f">
 
 <input type="text" name="name" placeholder="Your Name" required>
 
@@ -2228,6 +2179,7 @@ Our team will respond within 24 hours.
 </section>
 
 
+
 <style>
 
 /* SECTION */
@@ -2237,6 +2189,7 @@ padding:120px 8%;
 background:white;
 font-family:'Segoe UI',sans-serif;
 }
+
 
 /* CONTAINER */
 
@@ -2249,58 +2202,72 @@ gap:70px;
 align-items:center;
 }
 
+
 /* LEFT */
 
 .contact-left h2{
 font-size:38px;
-color:#033E3E;
+color:black;
 margin-bottom:10px;
 }
 
-/* DIVIDER (YOUR COLOR) */
+
+/* DIVIDER */
 
 .contact-divider{
 width:80px;
 height:4px;
-background:#008080;
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 margin-bottom:20px;
 border-radius:3px;
 }
 
-/* TEXT */
 
 .contact-text{
-color:#3C565B;
+color:#555;
 line-height:1.8;
 margin-bottom:35px;
 max-width:480px;
 }
 
+
 /* INFO BOX */
 
 .info-box{
-background:#F4FBFB;
-border-left:4px solid #008080;
+background:#F5FCFF;
+border-left:4px solid #00F0FF;
 padding:25px;
 border-radius:12px;
 display:flex;
 flex-direction:column;
 gap:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
+
 
 /* CONTACT ITEM */
 
+.contact-item{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.contact-item span{
+font-size:24px;
+}
+
 .contact-item h3{
-font-size:15px;
-color:#033E3E;
+font-size:16px;
+color:black;
 margin-bottom:3px;
 }
 
 .contact-item p{
 font-size:14px;
-color:#4C787E;
+color:#444;
 }
+
 
 /* FORM */
 
@@ -2308,11 +2275,12 @@ color:#4C787E;
 background:white;
 padding:40px;
 border-radius:12px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
+box-shadow:0 15px 40px rgba(0,0,0,0.06);
 display:flex;
 flex-direction:column;
 gap:14px;
 }
+
 
 /* INPUT */
 
@@ -2327,31 +2295,21 @@ transition:0.3s;
 width:100%;
 }
 
+
 /* INPUT FOCUS */
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-border-color:#008080;
-box-shadow:0 0 0 2px rgba(0,128,128,0.15);
+border-color:#00F0FF;
+box-shadow:0 0 0 2px rgba(0,240,255,0.15);
 }
+
 
 /* BUTTON */
 
 .contact-form button{
 margin-top:10px;
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+background:linear-gradient(90deg,#00F0FF,#0000FF);
 color:white;
 border:none;
 padding:14px;
@@ -2363,25 +2321,29 @@ transition:0.3s;
 }
 
 .contact-form button:hover{
-background:#045F5F;
-transform:translateY(-2px);
+transform:translateY(-3px);
+box-shadow:0 8px 25px rgba(0,0,255,0.3);
 }
+
 
 /* NOTE */
 
 .note{
 font-size:12px;
-color:#5E7D7E;
+color:#777;
 margin-top:6px;
 }
 
-/* MOBILE */
+
+/* MOBILE RESPONSIVE */
 
 @media(max-width:900px){
 
 .contact-section{
-padding:80px 6%;
+padding:70px 5%;
 }
+
+/* STACK LAYOUT */
 
 .contact-container{
 grid-template-columns:1fr;
@@ -2389,23 +2351,78 @@ gap:40px;
 text-align:center;
 }
 
+/* TITLE */
+
 .contact-left h2{
-font-size:30px;
+font-size:28px;
+line-height:1.3;
 }
+
+/* TEXT */
 
 .contact-text{
 margin:auto;
 max-width:100%;
+font-size:15px;
+line-height:1.7;
 }
 
+/* INFO BOX */
+
 .info-box{
-max-width:350px;
+max-width:380px;
 margin:auto;
+padding:20px;
 text-align:left;
 }
 
+/* CONTACT ITEMS */
+
+.contact-item{
+gap:12px;
+}
+
+.contact-item span{
+font-size:22px;
+}
+
+/* FORM */
+
 .contact-form{
-padding:30px;
+padding:25px;
+width:100%;
+max-width:420px;
+margin:auto;
+}
+
+/* INPUTS */
+
+.contact-form input,
+.contact-form textarea{
+font-size:15px;
+padding:14px;
+}
+
+/* TEXTAREA */
+
+.contact-form textarea{
+min-height:120px;
+resize:none;
+}
+
+/* BUTTON */
+
+.contact-form button{
+width:100%;
+padding:14px;
+font-size:15px;
+}
+
+/* NOTE */
+
+.note{
+font-size:12px;
+text-align:center;
 }
 
 }
@@ -2413,39 +2430,91 @@ padding:30px;
 </style>
 
 
+
 <script>
+
+/* SUCCESS ALERT */
+
 const form = document.querySelector(".contact-form");
 
 form.addEventListener("submit", function(){
 alert("Your message has been sent successfully! Our team will contact you soon.");
 });
+
 </script>
-<!-- FOOTER START -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-left">
+
+<h3>HygieneOps Copilot</h3>
+
+<p>
+AI-powered hygiene execution platform designed for food manufacturers.
+The system converts sanitation procedures into machine-enforceable
+workflows, ensuring audit-ready compliance, real-time verification,
+and safer food production environments.
+</p>
+
+</div>
+
+
+<!-- CENTER -->
+<div class="footer-links">
+
+<h4>Platform</h4>
+
+<a href="#home">Home</a>
+<a href="#process">Process</a>
+<a href="#platform">Platform</a>
+<a href="#pricing">Pricing</a>
+
+</div>
+
+
+<!-- RIGHT -->
+<div class="footer-links">
+
+<h4>Company</h4>
+
+<a href="#about">About Us</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+
+<!-- BOTTOM -->
+
+<div class="footer-bottom">
+
+<p>© 2026 HygieneOps Copilot. All rights reserved.</p>
+
+<button class="top-btn" onclick="scrollTopBtn()">↑</button>
+
+</div>
+
+</footer>
+
 
 <style>
 
-.footer{
-background:
-linear-gradient(
-135deg,
-#033E3E 0%,
-#045D5D 12%,
-#045F5F 24%,
-#007C80 36%,
-#008080 48%,
-#307D7E 60%,
-#3C565B 72%,
-#4C787E 84%,
-#5E7D7E 100%
-);
+/* FOOTER */
 
-color:white;
+.footer{
+background: linear-gradient(135deg,#00F0FF,#0000FF);
+color:#ffffff;
 padding:60px 8% 25px;
 font-family:'Segoe UI',sans-serif;
 }
 
 
 /* CONTAINER */
+
 .footer-container{
 max-width:1100px;
 margin:auto;
@@ -2454,70 +2523,86 @@ grid-template-columns:1.5fr 1fr 1fr;
 gap:40px;
 }
 
+
 /* LEFT */
+
 .footer-left h3{
-font-size:22px;
 margin-bottom:12px;
-color:white;
+font-size:22px;
+color:#000000;
 }
 
 .footer-left p{
 font-size:14px;
-line-height:1.7;
-color:#CFEFEF;
+line-height:1.6;
+color:#d9f6ff;
 }
 
+
 /* LINKS */
+
+.footer-links{
+display:flex;
+flex-direction:column;
+}
+
 .footer-links h4{
 margin-bottom:12px;
-font-size:15px;
-color:white;
+color:#000000;
 }
 
 .footer-links a{
-display:block;
 text-decoration:none;
-color:#AEEEEE;
+color:#d9f6ff;
 margin-bottom:8px;
 font-size:14px;
 transition:0.3s;
 }
 
 .footer-links a:hover{
-color:white;
-padding-left:4px;
+color:#ffffff;
+transform:translateX(3px);
 }
 
+
 /* BOTTOM */
+
 .footer-bottom{
 max-width:1100px;
 margin:35px auto 0;
 display:flex;
 justify-content:space-between;
 align-items:center;
-border-top:1px solid rgba(255,255,255,0.2);
+border-top:1px solid rgba(255,255,255,0.25);
 padding-top:15px;
 font-size:13px;
+color:#000000;
 }
 
-/* BUTTON */
+
+/* TOP BUTTON */
+
 .top-btn{
-background:#008080;
+background:#ffffff;
+color:#0000FF;
 border:none;
-color:white;
-width:36px;
-height:36px;
+width:35px;
+height:35px;
 border-radius:50%;
 cursor:pointer;
 font-size:18px;
+font-weight:bold;
 transition:0.3s;
 }
 
 .top-btn:hover{
-background:#045F5F;
+background:#00F0FF;
+color:#000;
 }
 
+
 /* MOBILE */
+
 @media(max-width:900px){
 
 .footer-container{
@@ -2531,76 +2616,23 @@ gap:10px;
 }
 
 }
+
 </style>
 
 
-<footer class="footer">
-
-<div class="footer-container">
-
-<!-- LEFT -->
-<div class="footer-left">
-
-<h3>SmartPayPlatform</h3>
-
-<p>
-SmartPayPlatform is an AI-driven fraud detection and payment optimisation platform 
-built for fintech companies, payment service providers, and high-volume digital businesses.
-
-It enables real-time transaction monitoring, predictive fraud scoring before authorisation, 
-and automated compliance reporting to reduce financial risk and improve operational efficiency.
-</p>
-
-</div>
-
-<!-- CENTER -->
-<div class="footer-links">
-
-<h4>Platform</h4>
-
-<a href="#home">Home</a>
-<a href="#platform">Platform</a>
-<a href="#process">How It Works</a>
-<a href="#pricing">Pricing</a>
-
-</div>
-
-<!-- RIGHT -->
-<div class="footer-links">
-
-<h4>Company</h4>
-
-<a href="#about">About</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-</div>
-
-<!-- BOTTOM -->
-
-<div class="footer-bottom">
-
-<p>© 2026 SmartPayPlatform. All rights reserved.</p>
-
-<button class="top-btn" onclick="scrollToTop()">↑</button>
-
-</div>
-
-</footer>
-
 <script>
-function scrollToTop(){
+
+function scrollTopBtn(){
 window.scrollTo({
 top:0,
-behavior:'smooth'
+behavior:"smooth"
 });
 }
-</script>
 
-<!-- FOOTER END -->
+</script>
 
 </body>
 </html>
+
+
 
